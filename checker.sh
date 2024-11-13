@@ -3,11 +3,10 @@
 #	 vi: foldmarker={,} foldmethod=marker foldlevel=0 tabstop=4 filetype=sh
 # }
 
-declare -A items
-
 check_directory() {
-    directory_path=$PWD
+    items=$1
 
+    #directory_path=$PWD
     #printf "current_directory : "
     #printf "$directory_path"
     #printf "\n"
@@ -37,4 +36,9 @@ check_directory() {
     done
 }
 
-check_directory
+check_directory_wrapper() {
+    declare -A items
+    check_directory $items
+}
+
+check_directory_wrapper
