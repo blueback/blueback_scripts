@@ -26,14 +26,8 @@ check_directory() {
                 #printf $item
                 #printf "\n"
             else
-                if [ "$item" != "init.sh" ]; then
-                    echo "Error: duplicate script names: $item"
-                    exit 1
-                else
-                    printf "repeating $item"
-                    printf "\n"
-                    :
-                fi
+                echo "Error: duplicate script names: $item"
+                exit 1
             fi
         fi
     done
