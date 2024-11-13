@@ -16,13 +16,28 @@ popd > /dev/null
 # }
 
 
-# add this folders to path {
-export PATH="$HOME/blueback_scripts:${PATH}"
-# }
+# add all the sub-directories recursively to path {
+add_sub_paths() {
+    export PATH="$PWD:${PATH}"
 
+    for item in *; do
+        if [ -d $item ]; then
+            # Directory names can repeat in the hierarchy
+            pushd $item > /dev/null
+            add_sub_paths
+            popd > /dev/null
+        fi
+    done
+}
 
-# source sub-folders init.sh to path {
-source "$HOME/blueback_scripts/scripts/init.sh"
+add_sub_paths_wrapper() {
+    pushd "$HOME/blueback_scripts" > /dev/null
+    add_sub_paths
+    popd > /dev/null
+    #echo $PATH
+}
+
+add_sub_paths_wrapper
 # }
 
 
@@ -44,3 +59,4 @@ source "$HOME/blueback_scripts/scripts/init.sh"
 # export LD_LIBRARY_PATH="$HOME/project2/build/lib:${LD_LIBRARY_PATH}"
 ################################################################################
 # }
+
