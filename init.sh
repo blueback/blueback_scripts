@@ -9,6 +9,13 @@ alias v="vim"
 # }
 
 
+# run script checker {
+pushd "$HOME/blueback_scripts" > /dev/null
+source checker.sh
+popd > /dev/null
+# }
+
+
 # add this folders to path {
 export PATH="$HOME/blueback_scripts:${PATH}"
 # }
