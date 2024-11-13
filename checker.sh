@@ -12,25 +12,28 @@ check_directory() {
     #printf "\n"
 
     for item in *; do
-        if [ "${items[$item]}" = "" ]; then
+        if [ -d $item ]; then
+            # Directory names can repeat in the hierarchy
             items["$item"]="$item"
 
-            #printf $item
-            #printf "\n"
-
-            if [ -d $item ]; then
-                pushd $item > /dev/null
-                check_directory
-                popd > /dev/null
-            fi
+            pushd $item > /dev/null
+            check_directory
+            popd > /dev/null
         else
-            if [ "$item" != "init.sh" ]; then
-                echo "Error: duplicate script names: $item"
-                exit 1
+            if [ "${items[$item]}" = "" ]; then
+                items["$item"]="$item"
+
+                #printf $item
+                #printf "\n"
             else
-                printf "repeating $item"
-                printf "\n"
-                :
+                if [ "$item" != "init.sh" ]; then
+                    echo "Error: duplicate script names: $item"
+                    exit 1
+                else
+                    printf "repeating $item"
+                    printf "\n"
+                    :
+                fi
             fi
         fi
     done
