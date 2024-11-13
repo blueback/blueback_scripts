@@ -11,7 +11,7 @@ alias v="vim"
 
 # run script checker {
 pushd "$HOME/blueback_scripts" > /dev/null
-source checker.sh
+bash checker.sh
 popd > /dev/null
 # }
 
