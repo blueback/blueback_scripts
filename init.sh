@@ -6,6 +6,19 @@
 
 # my aliases {
 alias v="vim"
+
+# nvim aliases {
+## alias vim="nvim"
+## alias vi="nvim"
+## alias v="nvim"
+# }
+
+# git diff {
+alias gdf="git diftool -y"
+# }
+
+alias top="htop"
+
 # }
 
 

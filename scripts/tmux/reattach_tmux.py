@@ -1,4 +1,4 @@
-#!/u/prod/python/python3.8.3/linux_x86_64/bin/python3
+#!/usr/bin/python3
 
 import os
 import re
