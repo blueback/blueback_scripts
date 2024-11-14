@@ -20,7 +20,7 @@ if [ $? != 0 ]; then
     tmux split-window -t $CIRCUIT:build -h
 
     tmux select-window -t $CIRCUIT:project
-    tmux send-key -t $CIRCUIT:project C-b I Enter
+    tmux source-file $HOME/blueback_scripts/scripts/tmux/tmux.conf
     # }
 fi
 
