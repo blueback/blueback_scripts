@@ -11,3 +11,4 @@ sudo apt install htop
 sudo apt install ripgrep
 sudo apt install numactl
 sudo apt install python3
+sudo apt install python3-pip
