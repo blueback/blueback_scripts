@@ -57,8 +57,6 @@ add_sub_paths_wrapper
 ################################################################################
 #   add custom apps using following template
 ################################################################################
-# export PATH="$HOME/project1/build/bin:${PATH}"
-# export PATH="$HOME/project2/build/bin:${PATH}"
 export PATH="$HOME/.local/neovim/bin:${PATH}"
 ################################################################################
 # }
@@ -68,8 +66,6 @@ export PATH="$HOME/.local/neovim/bin:${PATH}"
 ################################################################################
 #   add custom libs using following template
 ################################################################################
-# export LD_LIBRARY_PATH="$HOME/project1/build/lib:${LD_LIBRARY_PATH}"
-# export LD_LIBRARY_PATH="$HOME/project2/build/lib:${LD_LIBRARY_PATH}"
 export LD_LIBRARY_PATH="$HOME/.local/neovim/lib:${LD_LIBRARY_PATH}"
 ################################################################################
 # }
