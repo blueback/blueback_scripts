@@ -5,16 +5,15 @@
 
 
 # my aliases {
-alias v="vim"
+#alias v="vim"
 
 # nvim aliases {
-## alias vim="nvim"
-## alias vi="nvim"
-## alias v="nvim"
+alias vim="nvim"
+alias v="nvim"
 # }
 
 # git diff {
-alias gdf="git diftool -y"
+alias gdf="git difftool -y"
 # }
 
 alias top="htop"
@@ -60,6 +59,7 @@ add_sub_paths_wrapper
 ################################################################################
 # export PATH="$HOME/project1/build/bin:${PATH}"
 # export PATH="$HOME/project2/build/bin:${PATH}"
+export PATH="$HOME/.local/neovim/bin:${PATH}"
 ################################################################################
 # }
 
@@ -70,6 +70,7 @@ add_sub_paths_wrapper
 ################################################################################
 # export LD_LIBRARY_PATH="$HOME/project1/build/lib:${LD_LIBRARY_PATH}"
 # export LD_LIBRARY_PATH="$HOME/project2/build/lib:${LD_LIBRARY_PATH}"
+export LD_LIBRARY_PATH="$HOME/.local/neovim/lib:${LD_LIBRARY_PATH}"
 ################################################################################
 # }
 
