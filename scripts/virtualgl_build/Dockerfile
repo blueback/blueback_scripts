@@ -8,6 +8,7 @@ RUN apt-get -y install make cmake
 
 RUN apt-get -y install net-tools
 
+
 ########################################################################
 # Following are some dependencies for virtualgl
 #
@@ -27,3 +28,12 @@ RUN apt-get -y install libxcb-glx0-dev
 RUN apt-get -y install libx11-xcb-dev
 RUN apt-get -y install libglfw3-dev libgles2-mesa-dev
 ########################################################################
+
+
+########################################################################
+# Following are some dependencies for raylib
+#
+########################################################################
+RUN apt-get -y install libasound2-dev libx11-dev libxrandr-dev libxi-dev
+RUN apt-get -y install libgl1-mesa-dev libglu1-mesa-dev libxcursor-dev 
+RUN apt-get -y install libxinerama-dev libwayland-dev libxkbcommon-dev
