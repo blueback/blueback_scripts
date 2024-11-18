@@ -1,30 +1,45 @@
 <h1 align="center">
 Raylib in Docker VNC server
-<h1/>
+</h1>
 
 Building Docker image
 ---------------------
-1. start docker deamon:-
+1. Start docker deamon:-
 
         dockerd-rootless-setup.sh install
 
-2. start docker comtainer:-
+2. Start docker comtainer:-
 
         docker compose up -d
 
-3. enter container:-
+    a. To build fresh while creating container
 
-        docker exec -it virtualgl_build_run su root
+        docker compose up -d --build
 
-4. build raylib for turbo vnc:-
+3. Enter container:-
+
+        docker exec -it virtual_raylib_run su root
+
+4. Download and build raylib/turboVNC:-
 
         ./build.sh
 
-5. start vncserver:-
+5. Start vncserver at port 5902:-
 
         source vnc.sh
 
-6. run raylib example:-
+6. Run raylib example:-
 
         raylib/build/examples/core_3d_camera_first_person
 
+7. Stop docker container:-
+
+        docker compose down
+
+8. Stop docker deamon:-
+
+        dockerd-rootless-setup.sh uninstall
+
+9. To delete the container for good!:-
+
+        docker rm virtual_raylib_run

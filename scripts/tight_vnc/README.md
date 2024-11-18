@@ -37,4 +37,6 @@ To start a vncserver
 
         vncserver -kill :1
 
-
+NOTE:-
+======
+Already tried raylib with turboVNC so tightvncserver not needed anymore!

@@ -1,11 +1,11 @@
 version: '1'
 services:
-  virtualgl_build_run:
-    image: virtualgl_build
+  virtual_raylib_run:
+    image: virtual_raylib
     build:
       context: .
       no_cache: false
-    container_name: virtualgl_build_run
+    container_name: virtual_raylib_run
     ports:
       - "5902:5902"
     volumes:
