@@ -8,7 +8,7 @@ Building Docker image
 
         dockerd-rootless-setup.sh install
 
-2. Start docker comtainer:-
+2. Start docker container:-
 
         docker compose up -d
 
@@ -26,20 +26,24 @@ Building Docker image
 
 5. Start vncserver at port 5902:-
 
-        source vnc.sh
+        source vnc_start.sh
 
 6. Run raylib example:-
 
         raylib/build/examples/core_3d_camera_first_person
 
-7. Stop docker container:-
+7. Stop vncserver:-
+
+        source vnc_stop.sh
+
+8. Stop docker container:-
 
         docker compose down
 
-8. Stop docker deamon:-
+9. Stop docker deamon:-
 
         dockerd-rootless-setup.sh uninstall
 
-9. To delete the container for good!:-
+10. To delete the container for good!:-
 
         docker rm virtual_raylib_run
