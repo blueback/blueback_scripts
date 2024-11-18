@@ -62,3 +62,22 @@ cd ${THIRDPARTY_ROOT}
 # }
 
 # }
+
+
+# turbovnc server {
+
+# download turbovnc server {
+git clone https://github.com/TurboVNC/turbovnc.git
+# }
+
+# build turbovnc server {
+cd turbovnc/
+rm -rf build
+mkdir build
+cd build
+cmake .. -DTJPEG_INCLUDE_DIR=${THIRDPARTY_ROOT}/libjpeg-turbo/src -DTJPEG_LIBRARY="-L${THIRDPARTY_ROOT}/libjpeg-turbo/build -lturbojpeg" -DTVNC_BUILDVIEWER=0
+make -j28
+cd ${THIRDPARTY_ROOT}
+# }
+
+# }
