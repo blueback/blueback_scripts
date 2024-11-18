@@ -20,7 +20,10 @@ RUN apt-get -y install libxtst-dev
 RUN apt-get -y install libxss-dev libxxf86vm-dev libxkbfile-dev libxv-dev
 RUN apt-get -y install libgl-dev
 RUN apt-get -y install libglu-dev
-RUN apt-get -y install libxcb-randr0-dev libxcb-xtest0-dev libxcb-xinerama0-dev libxcb-shape0-dev libxcb-xkb-dev
+RUN apt-get -y install libglx-dev
+RUN apt-get -y install libxcb-randr0-dev libxcb-xtest0-dev
+RUN apt-get -y install libxcb-xinerama0-dev libxcb-shape0-dev
+RUN apt-get -y install libxcb-xkb-dev
 RUN apt-get -y install libxcb-keysyms1
 RUN apt-get -y install libxcb-keysyms1-dev
 RUN apt-get -y install libxcb-glx0
@@ -37,3 +40,29 @@ RUN apt-get -y install libglfw3-dev libgles2-mesa-dev
 RUN apt-get -y install libasound2-dev libx11-dev libxrandr-dev libxi-dev
 RUN apt-get -y install libgl1-mesa-dev libglu1-mesa-dev libxcursor-dev 
 RUN apt-get -y install libxinerama-dev libwayland-dev libxkbcommon-dev
+########################################################################
+
+
+########################################################################
+# Install vncserver
+#
+########################################################################
+RUN apt-get -y install tightvncserver
+########################################################################
+
+
+########################################################################
+# Install glxinfo
+#
+########################################################################
+RUN apt-get -y install xserver-xorg
+RUN apt-get -y install mesa-utils
+RUN apt-get -y install libgl1-mesa-glx
+RUN apt-get -y install intel-media-va-driver:amd64
+RUN apt-get -y install libdrm-intel1:amd64
+RUN apt-get -y install xserver-xorg-video-intel
+RUN apt-get -y install mesa-common-dev
+RUN apt-get -y install lxde
+########################################################################
+
+
