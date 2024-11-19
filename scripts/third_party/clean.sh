@@ -1,1 +1,1 @@
-rm -rf libjpeg-turbo/ virtualgl/ raylib/ turbovnc/
+rm -rf libjpeg-turbo/ raylib/ turbovnc/

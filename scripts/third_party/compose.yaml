@@ -1,11 +1,11 @@
 version: '1'
 services:
-  virtual_raylib_run:
-    image: virtual_raylib
+  vnc_raylib_run:
+    image: vnc_raylib
     build:
       context: .
       no_cache: false
-    container_name: virtual_raylib_run
+    container_name: vnc_raylib_run
     ports:
       - "5902:5902"
     volumes:

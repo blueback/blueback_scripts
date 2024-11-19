@@ -7,14 +7,14 @@
 THIRDPARTY_ROOT=${PWD}
 
 
-# libjpeg-turbo {
+# raylib {
 
-# download libjpeg-turbo {
-git clone https://github.com/libjpeg-turbo/libjpeg-turbo.git
+# download raylib {
+git clone https://github.com/raysan5/raylib.git
 # }
 
-# build libjpeg-turbo {
-cd libjpeg-turbo/
+# build raylib {
+cd raylib/
 rm -rf build
 mkdir build
 cd build
@@ -26,33 +26,15 @@ cd ${THIRDPARTY_ROOT}
 # }
 
 
-# VirtualGL {
+# libjpeg-turbo {
+# NOTE: This is a dependency of turbovnc
 
-# download virtualgl {
-git clone https://github.com/VirtualGL/virtualgl.git
+# download libjpeg-turbo {
+git clone https://github.com/libjpeg-turbo/libjpeg-turbo.git
 # }
 
-# build virtualgl {
-cd virtualgl/
-rm -rf build
-mkdir build
-cd build
-cmake .. -DTJPEG_INCLUDE_DIR=${THIRDPARTY_ROOT}/libjpeg-turbo/src -DTJPEG_LIBRARY="-L${THIRDPARTY_ROOT}/libjpeg-turbo/build -lturbojpeg"
-make -j28
-cd ${THIRDPARTY_ROOT}
-# }
-
-# }
-
-
-# raylib {
-
-# download raylib {
-git clone https://github.com/raysan5/raylib.git
-# }
-
-# build raylib {
-cd raylib/
+# build libjpeg-turbo {
+cd libjpeg-turbo/
 rm -rf build
 mkdir build
 cd build

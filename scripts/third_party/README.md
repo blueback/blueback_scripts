@@ -18,7 +18,7 @@ Building Docker image
 
 3. Enter container:-
 
-        docker exec -it virtual_raylib_run su root
+        docker exec -it vnc_raylib_run su root
 
 4. Download and build raylib/turboVNC:-
 
@@ -46,4 +46,4 @@ Building Docker image
 
 10. To delete the container for good!:-
 
-        docker rm virtual_raylib_run
+        docker rm vnc_raylib_run
