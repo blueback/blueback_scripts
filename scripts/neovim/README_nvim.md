@@ -2,8 +2,8 @@
 Neovim full configuration guide
 </h1>
 
-Building Docker image
----------------------
+Install/Configure Neovim
+------------------------
 1. Start installing neovim:-
 
         ./nvim_install.sh

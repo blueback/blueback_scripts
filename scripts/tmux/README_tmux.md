@@ -2,8 +2,8 @@
 tmux full configuration guide
 </h1>
 
-Building Docker image
----------------------
+Install/Configure Tmux:-
+------------------------
 1. Start installing tmux:-
 
         ./tmux_install.sh
