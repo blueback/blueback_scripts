@@ -13,3 +13,4 @@ Install/Configure Neovim
         nvim
 
     This will install Lazyvim package manager, it takes a while!!!
+    This also puts neovim configurations and plugins to ~/.config folder
