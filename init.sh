@@ -70,3 +70,8 @@ export LD_LIBRARY_PATH="$HOME/.local/neovim/lib:${LD_LIBRARY_PATH}"
 ################################################################################
 # }
 
+
+# Using vi binding for shell {
+set -o vi
+bindkey -v
+# }
